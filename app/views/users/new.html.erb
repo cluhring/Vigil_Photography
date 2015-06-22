@@ -1,0 +1,19 @@
+<% provide(:title, 'New User Page') %>
+<h1>New User Page</h1>
+<p>Find me in app/views/users/new.html.erb</p>
+
+<%#= form_for(@user, html: {multipart: true}) do |f| %>
+
+	<ul>
+		<% @user.errors.full_messages.each do |error| %>
+		  <li><%= error %></li>
+	  <% end %>
+	</ul>
+	<p>
+		<%#= f.label :first_name %><br />
+		<%#= f.text_field :first_name %>
+	</p>
+	<p>
+		<%#= f.submit %>
+	</p>
+<%# end %>

@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root 'static_pages#home'
-  get 'static_pages/portfolio'
-  get 'static_pages/about_me'
-  get 'static_pages/contact'
+  get 'portfolio' => 'static_pages#portfolio'
+  get 'about_me' => 'static_pages#about_me'
+  get 'contact' => 'static_pages#contact'
+  get 'faqs' => 'static_pages#faqs'
+  resources :users, only: [:new]
 end
