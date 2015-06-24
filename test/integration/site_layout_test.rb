@@ -9,6 +9,6 @@ class SiteLayoutTest < ActionDispatch::IntegrationTest
     assert_select "a[href=?]", about_me_path
     assert_select "a[href=?]", portfolio_path
     assert_select "a[href=?]", contact_path
-    assert_select "title", "Vigil Photography | New User Page"
+    assert_select "title", "Vigil Photography"
   end
 end

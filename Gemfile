@@ -9,7 +9,7 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'sdoc', '~> 0.4.0', group: :doc
-# gem 'bcrypt', '~> 3.1.7'
+gem 'bcrypt', '~> 3.1.7'
 # gem 'unicorn'
 
 group :development, :test do
@@ -22,6 +22,9 @@ end
 
 group :test do
   gem 'minitest-emoji'
+  gem 'guard-minitest'
+  gem 'guard'
+  gem 'shoulda'
 end
 
 group :production do
