@@ -2,7 +2,7 @@
 <h1>New User Page</h1>
 <p>Find me in app/views/users/new.html.erb</p>
 
-<%#= form_for(@user, html: {multipart: true}) do |f| %>
+<%= form_for(@user, html: {multipart: true}) do |f| %>
 
 	<ul>
 		<% @user.errors.full_messages.each do |error| %>
@@ -10,10 +10,26 @@
 	  <% end %>
 	</ul>
 	<p>
-		<%#= f.label :first_name %><br />
-		<%#= f.text_field :first_name %>
+		<%= f.label :first_name, "First Name" %><br>
+		<%= f.text_field :first_name %>
 	</p>
 	<p>
-		<%#= f.submit %>
+		<%= f.label :last_name, "Last Name" %><br>
+		<%= f.text_field :last_name %>
 	</p>
-<%# end %>
+	<p>
+		<%= f.label :email, "Email Address" %><br>
+		<%= f.text_field :email %>
+	</p>
+	<p>
+		<%= f.label :password %><br>
+		<%= f.text_field :password %>
+	</p>
+	<p>
+		<%= f.label :password_confirmation, "Password Confirmation" %><br>
+		<%= f.text_field :password_confirmation %>
+	</p>
+	<p>
+		<%= f.submit %>
+	</p>
+<% end %>

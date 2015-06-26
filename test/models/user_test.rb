@@ -30,11 +30,7 @@ class UserTest < ActiveSupport::TestCase
   should validate_length_of(:password).is_at_least(6)
 
   def setup
-    @valid_user = User.create(first_name: "First",
-                        last_name: "Last",
-                        email: "uSer@exaMple.com",
-                        password: "zoinks!",
-                        password_confirmation: "zoinks!")
+    @valid_user = create(:user)
   end
 
   test "a user should be valid" do
@@ -42,6 +38,6 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "an email should be saved as lower-case" do
-    assert_equal "user@example.com", @valid_user.email
+    assert_equal "test@example.com", @valid_user.email
   end
 end

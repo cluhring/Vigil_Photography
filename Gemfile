@@ -25,6 +25,8 @@ group :test do
   gem 'guard-minitest'
   gem 'guard'
   gem 'shoulda'
+  gem 'factory_girl_rails', '~> 4.5.0'
+
 end
 
 group :production do
