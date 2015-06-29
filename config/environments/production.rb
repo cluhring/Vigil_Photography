@@ -42,7 +42,10 @@ Rails.application.configure do
   # config.action_dispatch.x_sendfile_header = 'X-Accel-Redirect' # for NGINX
 
   # Force all access to the app over SSL, use Strict-Transport-Security, and use secure cookies.
-  # config.force_ssl = true
+  config.force_ssl = true
+  # When submitting the signup form developed in this chapter, the name, email address, and password get sent over the network, and hence are vulnerable to intercept. This is a potentially serious security flaw in our application, and the way to fix it is to use Secure Sockets Layer (SSL)11 to encrypt all relevant information before it leaves the local browser. Although we could use SSL on just the signup page, it’s actually easier to implement it site-wide, which has the additional benefits of securing user login (Chapter 8) and making our application immune to a critical session hijacking vulnerability discussed in Section 8.4.
+  # At this stage, we need to set up SSL on the remote server. Setting up a production site to use SSL involves purchasing and configuring an SSL certificate for your domain. That’s a lot of work, though, and luckily we won’t need it here: for an application running on a Heroku domain (such as the sample application), we can piggyback on Heroku’s SSL certificate. As a result, when we deploy the application in Section 7.5.2, SSL will automatically be enabled. (If you want to run SSL on a custom domain, such as www.example.com, refer to Heroku’s page on SSL.)
+
 
   # Use the lowest log level to ensure availability of diagnostic information
   # when problems arise.
