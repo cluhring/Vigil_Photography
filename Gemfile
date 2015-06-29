@@ -26,7 +26,8 @@ group :test do
   gem 'guard'
   gem 'shoulda'
   gem 'factory_girl_rails', '~> 4.5.0'
-
+  gem 'capybara'
+  gem 'launchy'
 end
 
 group :production do

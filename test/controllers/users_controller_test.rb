@@ -18,4 +18,7 @@ class UsersControllerTest < ActionController::TestCase
     assert_response :success
     assert_select "title", "#{@app_name} | #{user.first_name} #{user.last_name}"
   end
+
+  test "should create new user" do    
+  end
 end
