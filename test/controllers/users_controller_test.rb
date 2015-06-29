@@ -19,6 +19,10 @@ class UsersControllerTest < ActionController::TestCase
     assert_select "title", "#{@app_name} | #{user.first_name} #{user.last_name}"
   end
 
-  test "should create new user" do    
+  test "should create new user" do
+    assert_difference("User.count") do
+      post :create, user: attributes_for(:user)
+    end
+    assert_redirected_to user_path(assigns(:user))
   end
 end

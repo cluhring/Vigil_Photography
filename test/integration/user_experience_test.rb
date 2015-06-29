@@ -11,6 +11,8 @@ class UserExperienceTest < ActionDispatch::IntegrationTest
       post users_path, user: attributes_for(:user)
     end
     assert current_path = "users/show"
+    assert flash[:success]
+    assert_equal "Thanks for expressing interest in my Photography!", flash[:success]
   end
 
   test "a user can signup" do
