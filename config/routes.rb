@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get 'contact' => 'static_pages#contact'
   get 'faqs' => 'static_pages#faqs'
   resources :users, only: [:index, :new, :show, :create]
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 end

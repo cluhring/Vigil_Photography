@@ -51,4 +51,36 @@ class UserExperienceTest < ActionDispatch::IntegrationTest
       assert page.has_content?("Password is too short (minimum is 6 characters)")
     end
   end
+
+  test "a user only sees invalid login flash message once" do
+    user = create(:user)
+    visit login_path
+    assert template = 'sessions/new'
+    fill_in "session[email]", with: "test@example.com"
+    fill_in "session[password]", with: "passworks"
+    click_button("Log in")
+    assert_template = 'session/new'
+    within(".alert-danger") do
+      assert page.has_content?("Invalid email/password combination")
+    end
+    visit root_path
+    refute page.has_content?("Invalid email/password combination")
+  end
+
+  test "a user only sees invalid login flash message once" do
+    user = create(:user)
+    visit login_path
+    assert template = 'sessions/new'
+    fill_in "session[email]", with: "test@example.com"
+    fill_in "session[password]", with: "passworks"
+    click_button("Log in")
+    assert_template = 'session/new'
+    within(".alert-danger") do
+      assert page.has_content?("Invalid email/password combination")
+    end
+    visit root_path
+    refute flash[:danger]
+    assert flash.empty?
+    refute_equal "Invalid email/password combination", flash[:danger]
+  end
 end
