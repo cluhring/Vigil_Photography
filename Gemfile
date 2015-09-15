@@ -34,3 +34,8 @@ group :production do
   gem 'rails_12factor'
   gem 'puma', '2.11.1'
 end
+
+gem 'byebug'
+ gem 'better_errors'
+ gem 'binding_of_caller'
+ gem 'web-console'

@@ -2,6 +2,9 @@
 @import 'bootstrap';
 
 /* universal */
+.navbar-inverse {
+  background-color: #fff;
+}
 
 body {
   padding-top: 60px;
@@ -50,20 +53,24 @@ p {
 }
 
 /* header */
+@font-face {
+       font-family: "Didot";
+       src: url(/assets/Didot.ttf) format("truetype");
+}
 
-$yellow: #ffff00;
+$red: red;
+$light-gray: #777;
 
 #app_name {
+  font-family: "Didot";
   float: left;
   margin-right: 10px;
   font-size: 2.7em;
-  color: $yellow;
-  text-transform: uppercase;
-  letter-spacing: -1px;
+  color: $light-gray;
+  // letter-spacing: -1px;
   padding-top: 9px;
-  font-weight: bold;
   &:hover {
-    color: #fff;
+    color: $red;
     text-decoration: none;
   }
 }
@@ -75,8 +82,6 @@ $yellow: #ffff00;
 
 /* footer */
 
-$light-gray: #777;
-
 footer {
   margin-top: 45px;
   padding-top: 5px;
@@ -85,9 +90,21 @@ footer {
   a {
     color: #555;
     &:hover {
-      color: #fff;
+      color: $red;
     }
   }
+}
+
+.logo {
+  margin-bottom: 10px;
+  width: 220px;
+  height:199px;
+  display:block;
+  background:transparent url('vigil_logo1.png') center top no-repeat;
+}
+
+.logo:hover {
+  background-image: url('grey_vigil_logo.png');
 }
 
 /* mixins, variables, etc. */
