@@ -55,7 +55,7 @@ p {
 /* header */
 @font-face {
        font-family: "Didot";
-       src: url(/assets/Didot.ttf) format("truetype");
+       src: url('/fonts/Didot.ttf') format("truetype");
 }
 
 $red: red;
@@ -104,11 +104,11 @@ footer {
   display:block;
   margin-left: auto;
   margin-right: auto;
-  background:transparent url('vigil_logo1.png');
+  background:transparent url('/images/vigil_logo1.png');
 }
 
 .logo:hover {
-  background-image: url('grey_vigil_logo.png');
+  background-image: url('/images/grey_vigil_logo.png');
 }
 
 /* mixins, variables, etc. */
