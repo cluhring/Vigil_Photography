@@ -10,6 +10,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'bootstrap-sass'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'bcrypt', '~> 3.1.7'
+gem 'figaro'
 # gem 'unicorn'
 
 group :development, :test do
@@ -34,8 +35,3 @@ group :production do
   gem 'rails_12factor'
   gem 'puma', '2.11.1'
 end
-
-gem 'byebug'
- gem 'better_errors'
- gem 'binding_of_caller'
- gem 'web-console'
