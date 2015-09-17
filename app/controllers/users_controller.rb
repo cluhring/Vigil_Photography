@@ -13,7 +13,7 @@ class UsersController < ApplicationController
       flash[:success] = "Thank you for expressing interest in my Photography!"
       redirect_to @user
     else
-      flash[:danger] = "Sorry something is amiss, please try again."
+      flash[:danger] = "Sorry, something is amiss. Please try again."
       render 'new'
     end
   end

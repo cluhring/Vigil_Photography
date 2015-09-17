@@ -10,7 +10,7 @@ class GuestsController < ApplicationController
       flash[:success] = "Thank you for expressing interest in my Photography! I'll respond to your question(s) as soon as possible."
       redirect_to root_url
     else
-      flash[:danger] = "Sorry something is amiss, please try again."
+      flash[:danger] = "Sorry, something is amiss. Please try again."
       render :index
     end
   end
